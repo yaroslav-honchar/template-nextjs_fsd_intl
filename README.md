@@ -5,6 +5,14 @@ In the template uses:
 - [Featured design](https://feature-sliced.design/docs/guides/tech/with-nextjs) - as design pattern
 - [Next intl](https://next-intl-docs.vercel.app/) - as localization controller
 
+## Fast generate this template
+
+To fast generate this template, run this command.
+
+```bash
+npx nextjs-intl-fsd
+```
+
 ## Set up
 
 Install dependencies
