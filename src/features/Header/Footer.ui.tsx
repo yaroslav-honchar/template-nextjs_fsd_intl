@@ -1,5 +1,11 @@
 import React from "react"
 
+import { Container } from "@/shared/components"
+
 export const Footer: React.FC = () => {
-  return <footer>Header</footer>
+  return (
+    <footer className={"pb-8"}>
+      <Container>Header</Container>
+    </footer>
+  )
 }
