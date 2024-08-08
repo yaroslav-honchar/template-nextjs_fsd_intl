@@ -3,7 +3,8 @@
 In the template uses:
 
 - [Featured design](https://feature-sliced.design/docs/guides/tech/with-nextjs) - as design pattern
-- [Next intl](https://next-intl-docs.vercel.app/) - as localization controller
+- [Next intl](https://next-intl-docs.vercel.app/) - as localization provider
+- [Next themes](https://github.com/pacocoursey/next-themes#readme) - as theming provider
 
 ## Fast generate this template
 
