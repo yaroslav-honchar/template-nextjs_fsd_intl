@@ -1,5 +1,3 @@
-import cn from "classnames"
-
 import React from "react"
 
 import { ClientProviders, ServerProviders } from "@/_app/providers"
@@ -15,7 +13,7 @@ export const Layout: React.FC<ILayoutProps> = ({ children, locale }) => {
       <ClientProviders>
         <div className={"min-h-screen w-full flex flex-col"}>
           <Header />
-          <main className={cn("flex-grow", "pt-header-offset")}>{children}</main>
+          <main className={"flex-grow flex flex-col"}>{children}</main>
           <Footer />
         </div>
       </ClientProviders>
