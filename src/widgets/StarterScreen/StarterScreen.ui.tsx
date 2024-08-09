@@ -4,8 +4,6 @@ import React from "react"
 
 import { Container, Section } from "@/shared/components"
 
-const featuresKeys: string[] = ["feature1", "feature2", "feature3"]
-
 export const StarterScreen: React.FC = () => {
   const tStarterScreen = useTranslations("StarterScreen")
 
@@ -17,11 +15,6 @@ export const StarterScreen: React.FC = () => {
       >
         <h1 className={"text-4xl"}>{tStarterScreen("title")}</h1>
         <p className={"text-xl"}>{tStarterScreen("description")}</p>
-        <ul className={"text-xl"}>
-          {featuresKeys.map((key: string) => (
-            <li key={key}>{tStarterScreen(`features.${key}`)}</li>
-          ))}
-        </ul>
       </Container>
     </Section>
   )

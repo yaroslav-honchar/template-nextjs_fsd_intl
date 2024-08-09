@@ -2,11 +2,6 @@
   "Common": {},
   "StarterScreen": {
     "title": "Hey there, \uD83D\uDC4B!",
-    "description": "This project template is designed to help you get started quickly with Next.js, using Feature Sliced Design and Next Intl for internationalization.",
-    "features": {
-      "feature1": "\uD83D\uDD0D Feature Sliced Design: Організуйте свій проект за допомогою сучасного архітектурного підходу, який масштабується разом з вашим додатком.",
-      "feature2": "\uD83C\uDF10 Next Intl: Легко працюйте з декількома мовами та локалізацією.",
-      "feature3": "⚡ Швидкий розвиток: Побудовано на Next.js для високої продуктивності та зручності розробки."
-    }
+    "description": "This project template is designed to help you get started quickly with Next.js, using Feature Sliced Design and Next Intl for internationalization."
   }
 }

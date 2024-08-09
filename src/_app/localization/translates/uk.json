@@ -2,11 +2,6 @@
   "Common": {},
   "StarterScreen": {
     "title": "Привіт, \uD83D\uDC4B!",
-    "description": "Цей шаблон проекту призначений для швидкого старту з Next.js, використовуючи Feature Sliced Design та Next Intl для інтернаціоналізації.",
-    "features": {
-      "feature1": "\uD83D\uDD0D Feature Sliced Design: Organize your project with a modern architectural approach that scales with your app.",
-      "feature2": "\uD83C\uDF10 Next Intl: Seamlessly handle multiple languages and localization with ease.",
-      "feature3": "⚡ Fast Development: Built with Next.js for high performance and developer experience."
-    }
+    "description": "Цей шаблон проекту призначений для швидкого старту з Next.js, використовуючи Feature Sliced Design та Next Intl для інтернаціоналізації."
   }
 }
