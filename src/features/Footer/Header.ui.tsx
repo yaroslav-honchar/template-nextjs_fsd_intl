@@ -8,7 +8,7 @@ export const Header: React.FC = () => {
   return (
     <header className={"py-4"}>
       <Container className={"flex gap-2 items-center justify-between"}>
-        <p>Header</p>
+        <p>Logo</p>
         <ThemeSwitcher />
       </Container>
     </header>
