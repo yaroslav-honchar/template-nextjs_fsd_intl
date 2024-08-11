@@ -1,1 +1,1 @@
-export { Header } from "./Header.ui"
+export { Footer } from "./Footer.ui"
