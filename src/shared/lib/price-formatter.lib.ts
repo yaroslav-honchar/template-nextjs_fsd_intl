@@ -1,28 +1,23 @@
 /**
- * Formats a price value into a string with currency symbol.
+ * A function to format a price value into a currency string using the Intl.NumberFormat API.
+ * If the input price is not a number, it appends a dollar sign to the end of the price.
  *
- * @param {number | string} price - The price value to be formatted. It can be a number or a string that can be converted to a number.
- * @param {Intl.NumberFormatOptions} [options] - Optional. An object with properties that reflect the internationalization options of the NumberFormat object.
+ * @param price - The price value to be formatted. It can be a number or a string that can be converted to a number.
+ * @param options - Optional. An object containing options for the Intl.NumberFormat API.
  *
- * @returns {string} The formatted price string with currency symbol.
- *
- * @throws {console.warn} If the price value cannot be converted to a number, a warning is logged to the console and the function returns the original price value with a currency symbol.
- *
- * @example
- * // returns "1,234.56 ₴"
- * priceFormatterLib(1234.56)
+ * @returns A formatted currency string.
  *
  * @example
- * // returns "1,234.56 ₴"
- * priceFormatterLib("1234.56")
+ * ```typescript
+ * const formattedPrice = priceFormatter(12345.67);
+ * console.log(formattedPrice); // Output: $12,345.67
  *
- * @example
- * // returns "1,234.56 ₴"
- * priceFormatterLib("1234.56", { minimumFractionDigits: 2 })
+ * const formattedPriceWithOptions = priceFormatter(12345.67, { minimumFractionDigits: 0 });
+ * console.log(formattedPriceWithOptions); // Output: $12,346
  *
- * @example
- * // returns "1,234.56 ₴"
- * priceFormatterLib("not a number") // logs a warning to the console
+ * const formattedPriceWithNonNumericInput = priceFormatter("abc");
+ * console.log(formattedPriceWithNonNumericInput); // Output: abc $
+ * ```
  */
 export const priceFormatter = (
   price: number | string,
@@ -31,13 +26,12 @@ export const priceFormatter = (
   const priceAsNumber = +price
 
   if (isNaN(priceAsNumber)) {
-    // console.warn("The given value it should be a number. Or can be converted to a number: ", price)
-    return price + " ₴"
+    return price + " $"
   }
 
-  return new Intl.NumberFormat("uk", {
+  return new Intl.NumberFormat("en", {
     style: "currency",
-    currency: "UAH",
+    currency: "USD",
     currencyDisplay: "narrowSymbol",
     ...(options ? options : {}),
   }).format(priceAsNumber)

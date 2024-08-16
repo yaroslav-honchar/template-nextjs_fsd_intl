@@ -1,13 +1,24 @@
+/**
+ * A utility class for managing scrollbar visibility and width.
+ */
 export class Scrollbar {
   static scrollbarCSSVar: string = "--scrollbar-width"
   static initialBodyOverflow: string = this.isClient()
     ? getComputedStyle(document.body).overflow
     : "visible"
 
+  /**
+   * Checks if the environment supports the Document interface.
+   * @returns True if the Document interface is supported, false otherwise.
+   */
   private static isClient(): boolean {
     return typeof document !== "undefined"
   }
 
+  /**
+   * Checks if the scrollbar is visible.
+   * @returns True if the scrollbar is visible, false otherwise.
+   */
   static isScrollbarVisible(): boolean {
     if (!this.isClient()) {
       return false
@@ -16,6 +27,10 @@ export class Scrollbar {
     return document.documentElement.offsetWidth !== window.innerWidth
   }
 
+  /**
+   * Calculates the width of the scrollbar.
+   * @returns The width of the scrollbar in pixels.
+   */
   static getScrollbarWidth(): number {
     if (!this.isClient()) {
       return 0
@@ -39,6 +54,9 @@ export class Scrollbar {
     return widthDiff
   }
 
+  /**
+   * Locks the scrollbar by hiding it and storing its initial state.
+   */
   static lock(): void {
     if (!this.isClient()) {
       return
@@ -51,6 +69,9 @@ export class Scrollbar {
     document.documentElement.style.setProperty(this.scrollbarCSSVar, `${scrollbarWidth}px`)
   }
 
+  /**
+   * Unlocks the scrollbar by restoring its initial state.
+   */
   static unlock(): void {
     if (!this.isClient()) {
       return
