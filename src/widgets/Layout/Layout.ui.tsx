@@ -2,7 +2,8 @@ import React from "react"
 
 import { ClientProviders, ServerProviders } from "@/_app/providers"
 
-import { Footer, Header } from "@/features/Footer"
+import { Footer } from "@/features/Footer"
+import { Header } from "@/features/Header"
 
 import { ILayoutProps } from "./Layout.props"
 
